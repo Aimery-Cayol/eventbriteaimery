@@ -1,0 +1,9 @@
+<center>
+<h1> Mon profil </h1>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5> <%= current_user.first_name %> </h5>
+    <p> <%= current_user.description %> </p>
+    <%= link_to "Editer mon profil", edit_user_registration_path, :class => "btn btn-primary" %>
+  </div>
+</div>
