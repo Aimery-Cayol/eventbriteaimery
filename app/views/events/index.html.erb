@@ -1,2 +1,17 @@
-<center>
-<h1>Tous les Events </h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Voici les prochains évènements</h1>
+  </div>
+</div>
+
+ <div class="row justify-content-center">
+    <% @events.each do |event| %>
+      <div class="card m-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= event.title %></h5>
+          <p class="card-location"><%= event.location %></p>
+          <%= link_to "See the full event", event_path(event.id), :class => "btn btn-outline-secondary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
