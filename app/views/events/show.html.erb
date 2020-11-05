@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="mt-3">
+    <h1 class="text-center m-3">Title of this event : <%= @event.title %></h1>
+    <p>Description : <%= @event.description %></p>
+    <p>Nombre de participants : Not mentionned</p>
+    
+    <p>Durée : <%= @event.duration %></p>
+    <p>Localisation : <%= @event.location %></p>
+    <p>Prix : <%= @event.price %> €</p>
+    
+    <% if user_signed_in? %>
+    <%= link_to "Rejoindre l'événement", event_subscribe_path, :class => "btn btn-secondary btn-lg" %>
+    <%end%>
+    
+
+  </div>
+
+</div>
